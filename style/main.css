@@ -219,3 +219,9 @@ h1 span{
     right: 20px;
     cursor: pointer;
 }
+
+/*Responsive*/
+
+@media (max-width:768px) {
+    
+}
