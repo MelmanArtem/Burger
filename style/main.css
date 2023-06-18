@@ -130,24 +130,28 @@ h1 span{
     padding-top: 117px;
     padding-bottom: 106px;
 }
+.footer .container {
+    display: block;
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 .logo {
     width: 63px;
     height: 56px;
 }
-.item {
-    flex: 0 0 auto;
-}
-.item h2 {
+.footer-item h2 {
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 12px;
+    margin-top: 0;
+    color: #DEDEDE;
+    line-height: 1.5;
 }
-.item ul,
-.tel ul {
-    list-style-type: none;
-}
-.item li {
+.footer-list li {
     margin-bottom: 9px;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
@@ -155,23 +159,34 @@ h1 span{
     font-weight: 700;
     line-height: 24px;
 }
-.item a {
-    color: #DEDEDE;
-    text-decoration: none;
+.footer-list a {
+    color: #DEDEDE;    
     font-weight: 400;
+    transition: 0.3s;
 }
-.item span {
+.footer-list a:hover {
+    color: #FBB731;
+}
+.footer-item span {
     color: #DEDEDE;
     display: block;
     font-weight: 400;
     margin-bottom: 2px;
 }
-.tel ul {
+.footer-list-tel li {
+    margin-bottom: 12px;
+}
+.footer-list-tel a {
     font-size: 20px;
     color: #FBB731;
+    font-weight: 900;
+    transition: 0.3s;
 }
-.tel li {
-    margin-bottom: 12px;
+.footer-list-tel a:hover {
+    color: #DEDEDE;
+}
+.footer-list {
+    padding-left: 0;
 }
 
 /*Modal*/
@@ -222,6 +237,54 @@ h1 span{
 
 /*Responsive*/
 
-@media (max-width:768px) {
-    
+@media (max-width:550px) {
+    .footer {
+        padding-top: 46px;
+        padding-bottom: 60px;
+        margin-top: 28px;
+    }
+    .footer-list + .footer-list-tel {
+        display: none;
+    }
+    .footer-item h2 {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+    .footer-list-tel {
+        margin-top: 0px;
+        text-align: right;
+        margin-right: 8px;
+        letter-spacing: 0.2px;
+        grid-area: tel;
+    }
+    .footer-logo {
+        margin-bottom: 26px;
+        margin-top: 17px;
+    }
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "logo tel" "links links" "info info";
+        gap: 0;
+    }
+    .footer-item {
+        margin-bottom: 30px;
+    }
+    .footer-list.footer-list-tel {
+        gap: 0;
+    }
+    .footer-tel {
+        grid-area: tel;
+        display: block;
+        text-align: right;
+    }
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+    .footer-item:nth-child(2) {
+        grid-area: links;
+    }
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
 }
