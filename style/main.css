@@ -13,6 +13,7 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    padding: 0 15px;
 }
 .text{
    color: #FAF9F9;
@@ -85,11 +86,11 @@ h1 span{
 }
 .promo-left {
     background-image: url(../images/promo-left.png);
-    padding: 116px 50px;
+    padding: 90px 50px;
 }
 .promo-right {
     background-image: url(../images/promo-right.png);
-    padding: 102px 50px;
+    padding: 90px 50px;
 }
 .sale {
     font-size: 14px;
@@ -130,8 +131,10 @@ h1 span{
     padding-top: 117px;
     padding-bottom: 106px;
 }
-.footer .container {
-    display: block;
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 .footer-box {
     display: flex;
@@ -158,11 +161,13 @@ h1 span{
     color: #FAF9F9;
     font-weight: 700;
     line-height: 24px;
+    list-style-type: none;
 }
 .footer-list a {
     color: #DEDEDE;    
     font-weight: 400;
     transition: 0.3s;
+    text-decoration: none;
 }
 .footer-list a:hover {
     color: #FBB731;
@@ -236,8 +241,31 @@ h1 span{
 }
 
 /*Responsive*/
-
+@media (max-width: 1000px) {
+    .promo {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+    .footer-tel {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .promo {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+}
 @media (max-width:550px) {
+    .promo .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .promo {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
     .footer {
         padding-top: 46px;
         padding-bottom: 60px;
